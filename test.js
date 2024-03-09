@@ -30,4 +30,19 @@ function makeUser(name, age) {
     };
 }
 
+// Prototype inheritance example
+let animal = {
+    eats : true,
+    Walk() {
+        console.log("Animal is walking");
+    }
+};
+
+let rabbit = {
+    jumps: true,
+    __proto__: animal // inherit from animal
+};
+
+rabbit.walk(); // Animal is walking
+
 
