@@ -49,4 +49,15 @@ console.log(Object.keys(rabbit)); // jumps
 
 for (let keys in rabbit) console.log(keys); // jumps, eats, walk
 
+//How to separate own properties and inherited properties
+
+for(let keys in rabbit){
+    let isOwn = rabbit.hasOwnProperty(keys); //return true if the property is own
+
+    if (isOwn){
+        console.log(`Own: ${keys}`);
+    } else{
+        console.log(`Inherited: ${keys}`); 
+    }
+}
 
